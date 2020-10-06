@@ -220,16 +220,16 @@ p{
 .card{
     width: 260px;
     height: 405px;
-    /*margin-left: 25px;
-    margin-right: 25px;*/
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .card div{
-   /* width: 260px;
+    width: 260px;
     height: 325px;
     display: flex;
     align-items: center;
-    justify-content: center;*/
+    justify-content: center;
     background-color: #191B1C;
 }
 
@@ -252,7 +252,7 @@ p{
     background-image: url(../images/new-collection.png);
     background-size: cover;
     background-repeat: no-repeat;
-    /*height: 100vh;*/
+    height: 100vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
