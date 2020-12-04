@@ -6,7 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/7c4882e623.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -16,29 +19,34 @@
                 <div class="login"><i class="icon-login fas fa-sign-in-alt"></i><a href="">Войти / Регистрация</a></div>
             </div>
             <div class="second-line">
-                <div class="logo">PORTEN</div>
-                <div class="menu">
-                    <ul>
-                        <li class="liked"><a href="">понравилось</a></li>
-                        <li class="account"><a href="">личный кабинет</a></li>
-                        <li class="settings"><a href="">настройки</a></li>
-                        <li class="shop"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
-                        <li class="search"><a href=""><i class="fas fa-search"></i></a></li>
-                    </ul>
+                <div class="myAnimate logo">PORTEN</div>
+                <div class="menu-wrapper">
+                    <div class="menu">
+                        <ul>
+                            <li class="liked"><a href="#newpos">новые поступления</a></li>
+                            <li class="account"><a href="">личный кабинет</a></li>
+                            <li class="settings"><a href="">настройки</a></li>
+                            <li class="shop"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="search"><a href=""><i class="fas fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar__btn">
+                    <span></span>
                 </div>
             </div>
         </nav>
     </header>
     <main>
         <section class="first-screen">
-            <div class="first-content">
+            <div class="wow animate__bounceIn first-content">
                 <div class="porten">
                     <h1>PORTEN</h1>
                     <hr>
                     <h3>санкт-петербург</h3>
                 </div>
             </div>
-            <div class="first-content">
+            <div class="wow animate__bounceIn first-content">
                 <div class="lorem">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                     Sit sequi iste, pariatur fugiat, perspiciatis dignissimos minus quia molestiae, 
@@ -48,7 +56,7 @@
             </div>
         </section>
         <section class="season-new-collection">
-            <div class="new-season">
+            <div class="wow animate__backInLeft new-season">
                 <h1>сезон 2020/21</h1>
                 <hr>
                 <div class="season-card">
@@ -75,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="new-collection">
+            <div class="wow animate__backInRight new-collection">
                 <div class="new-collection-content">
                     <h1>Новая коллекция</h1>
                     <hr>
@@ -84,8 +92,8 @@
             </div>
         </section>
         <section class="collection-2018">
-            <img src="images/Rectangle 9.png" alt="">
-            <div class="collection-2018-content">
+            <img class="wow animate__backInLeft" src="images/Rectangle 9.png" alt="">
+            <div class="wow animate__backInRight collection-2018-content">
                 <div>
                 <h1>коллекция 2018</h1>
                 <hr>
@@ -94,10 +102,10 @@
                     eius atque adipisci quisquam quasi natus in magnam illo. 
                     Hic, esse vero.</p>
                 </div>
-                <div class="button"><a href="">ПОСМОТРЕТЬ КОЛЕЕКЦИЮ</a></div>
+                <div class="button"><a href="">ПОСМОТРЕТЬ КОЛЛЕКЦИЮ</a></div>
             </div>
         </section>
-        <section class="new-goods">
+        <section id="newpos" class="wow animate__fadeInUp new-goods">
             <h1>новые поступления</h1>
             <hr>
             <div class="new-goods-row">
@@ -161,7 +169,7 @@
                 </div>
             </div>
         </section>
-        <section class="our-brands">
+        <section class="wow animate__fadeInUp our-brands">
             <h1>наши бренды</h1>
             <hr>
             <div>
@@ -202,4 +210,17 @@
         </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+       $(".menu").on("click","a", function (event) {
+           event.preventDefault();
+           var id  = $(this).attr('href'),
+               top = $(id).offset().top;
+           $('body,html').animate({scrollTop: top}, 1500);
+       });
+   });
+   </script>
+<script src="js/my.js"></script>
 </html>
